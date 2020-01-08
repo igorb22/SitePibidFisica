@@ -7,8 +7,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Persistence;
+using PibidFisica.Services;
+using PibidFisica.Services.Interfaces;
 
 namespace PibidFisica
 {
@@ -30,6 +34,16 @@ namespace PibidFisica
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+
+
+            services.AddScoped<GerenciadorEvento>();
+            services.AddScoped<GerenciadorTrabalho>();
+            services.AddScoped<GerenciadorGaleria>();
+
+
+
+            services.AddDbContext<BD_PIBID_FISICAContext>(options =>
+              options.UseMySQL(Configuration.GetConnectionString("PibidFisicaConnection")));
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);

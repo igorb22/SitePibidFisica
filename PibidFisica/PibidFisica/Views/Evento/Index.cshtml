@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Models.EventoModel>
+
+@{
+    ViewData["Title"] = "Index";
+    int posicaoAtual = 0;
+    int contadorItens = 0;
+    int indice = 1;
+}
+
+
+
+<div align="center">
+
+    <br />
+    <h2>
+        Nossas Participações em Eventos
+    </h2>
+    
+</div>
+
+<br />
+<table class="table">
+    <br />
+    <tbody>
+        @for (int i = 0; i < (Model.Count() / 5) + 1; i++)
+        {
+            <tr style="white-space: pre-wrap" >
+                @foreach (var item in Model)
+                {
+                    indice++;
+
+                    if (indice > posicaoAtual)
+                    {
+                        contadorItens++;
+                        <td>
+                            <a style="height: 130pt;width: 150pt" href="@Url.Action("Details", "Evento", new { id = item.IdEvento })" class="btn btn-primary btn-sm">
+                                <img style="height: 110pt;width: 130pt" title="Clique para ver mais" src="~/images/encontro.jfif" /><br />
+                                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-weight: bold;font-size: 10pt" >
+                                    @Html.DisplayFor(modelItem => item.Titulo)
+                                </p>
+                            </a>
+                        </td>
+                    }
+
+                    if (contadorItens == 5)
+                    {
+                        posicaoAtual = indice;
+                        contadorItens = 0;
+                        break;
+                    }
+                }
+            </tr>
+            indice = 1;
+        }
+    </tbody>
+</table>

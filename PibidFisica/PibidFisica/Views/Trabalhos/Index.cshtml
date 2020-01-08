@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Models.TrabalhoModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<style>
+
+    .div-barra-pesquisa {
+        margin-top: 3%;
+        float: right;
+        display: inline-block;
+    }
+
+    .div-descricao {
+        display: inline-block;
+    }
+
+</style>
+
+<div>
+   <h2></h2>
+    <br />
+    <div>
+        <form asp-controller="Trabalhos" asp-action="Index">
+            <p>
+                <text style="font-size: 220%;"> Nossas Produções</text>
+                <button style="margin-top: 0.5%;float: right;margin-left: 0.3%" class="btn btn-default text-right">Pesquisar</button>
+                <input style="height: 25pt;width: 200pt;float: right;margin-top: 0.5%" type="text" placeholder="Pesquise por um titulo " name="pesquisa">
+            </p>
+        </form>
+    </div>
+
+
+
+    <ul style="margin:0; padding:0; list-style:none;">
+        @if (Model.Count() == 0)
+        {
+            <hr />
+
+            <li style="color: orangered">
+                Nenhum item foi encontrado, tente outra palavra.
+            </li>
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+                <hr />
+
+                <li style=" display:inline; float: inherit; width:6em;">
+                    <h4> @item.Titulo </h4>
+                    <div>@item.Autores </div>
+                    <a href="@item.Link" target="_blank" title="@item.Titulo">Ver publicação</a>
+                </li>
+            }
+        }
+    </ul>
+</div>
