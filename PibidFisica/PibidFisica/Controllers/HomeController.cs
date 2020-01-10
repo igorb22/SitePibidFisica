@@ -5,33 +5,41 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PibidFisica.Models;
+using PibidFisica.Services;
 
 namespace PibidFisica.Controllers
 {
     public class HomeController : Controller
     {
+        private const string PIBID = "PIBID", 
+                             GAEF = "GAEF", 
+                             FISICASHOW = "FISICA SHOW";
+
+        private readonly GerenciadorGaleria _gerenciadorGaleria;
+
+        public HomeController(GerenciadorGaleria gerenciadorGaleria)
+        {
+            _gerenciadorGaleria = gerenciadorGaleria;
+        }
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult About()
+        public ActionResult Gaef()
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
+            return View(_gerenciadorGaleria.ObterTodos(GAEF));
         }
 
-        public IActionResult Contact()
+        public ActionResult Pibid()
         {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            return View(_gerenciadorGaleria.ObterTodos(PIBID));
         }
 
-        public IActionResult Privacy()
+        public ActionResult FisicaShow()
         {
-            return View();
+            return View(_gerenciadorGaleria.ObterTodos(FISICASHOW));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

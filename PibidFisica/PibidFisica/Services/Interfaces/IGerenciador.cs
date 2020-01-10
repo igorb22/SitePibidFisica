@@ -10,7 +10,7 @@ namespace PibidFisica.Services.Interfaces
         // bool Inserir(T objeto);
         // bool Editar(T objeto);
         // bool Remover(int id);
-        List<T> ObterTodos();
+        List<T> ObterTodos(string programa);
         T ObterPorId(int id);
     }
 }

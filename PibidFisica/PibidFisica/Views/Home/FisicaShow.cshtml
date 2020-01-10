@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Models.GaleriaModel>
+
+@{
+    ViewData["Title"] = "FisicaShow";
+    int count = 0;
+}
+
+
+
+<table style="width: 100%">
+    <tr>
+        <td>
+            <h2>Sobre Fisica Show</h2>
+        </td>
+
+        <td>
+            <div style="text-align: right">
+                <div class="btn-group" role="group">
+                    <a asp-area="" class="btn btn-primary" asp-controller="Evento" asp-action="EventosFisicaShow">Participações em Eventos</a>
+                    <a asp-area="" class="btn btn-primary " asp-controller="Trabalhos" asp-action="TrabalhosFisicaShow">Nossos Trabalhos</a>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+
+@if (Model.Count() > 0)
+{
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            @for (int i = 1; i < Model.Count(); i++)
+            {
+                <li data-target="#myCarousel" data-slide-to="@i"></li>
+            }
+        </ol>
+        <div class="carousel-inner" role="listbox">
+
+            @foreach (var item in Model)
+            {
+                if (count == 0)
+                {
+                    <div class="item active">
+                        <img src="@item.Link" alt="ASP.NET" class="img-responsive center-block" style="max-width: 60%;max-height: 60%;" />
+                        <div class="carousel-caption" role="option">
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="item">
+                        <img src="@item.Link" alt="ASP.NET" class="img-responsive center-block" style="max-width: 60%;max-height: 60%;" />
+                        <div class="carousel-caption" role="option">
+                        </div>
+                    </div>
+                }
+                count++;
+            }
+
+        </div>
+
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+}
+
+<div>
+        <br />
+        <h2>O Que é o Física Show ? </h2>
+        <p>
+            Ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola
+            mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo
+        </p>
+
+        <h2>Participantes</h2>
+        <p>
+            Ola mundo ola mundo ola
+        </p>
+
+        <p>
+            Ola mundo ola mundo ola
+        </p>
+
+        <p>
+            Ola mundo ola mundo ola
+        </p>
+
+
+        <h2>Atividades Desenvolvidas</h2>
+        <p>
+            Ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola
+            mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo ola mundo
+        </p>
+
+</div>

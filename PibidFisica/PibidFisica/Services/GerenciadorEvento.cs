@@ -28,13 +28,17 @@ namespace PibidFisica.Services
                     DataFim = evento.DataFim,
                     Cidade = evento.Cidade,
                     Titulo = evento.Titulo,
+                    Programa = evento.Programa,
+                    Categoria = evento.Categoria,
+                    ImagemEvento = AdicionaImagemEvento(evento.Galeria),
                     Galeria = AdicionaGaleria(evento.Galeria),
                     Trabalho = AdicionaTrabalhos(evento.Trabalho)
                 }).FirstOrDefault();
 
 
-        public List<EventoModel> ObterTodos()
+        public List<EventoModel> ObterTodos(string programa)
         => _context.Evento
+            .Where(eventoModel => eventoModel.Programa.Equals(programa))
                 .Select(evento => new EventoModel
                 {
                     IdEvento = evento.IdEvento,
@@ -42,9 +46,14 @@ namespace PibidFisica.Services
                     DataFim = evento.DataFim,
                     Titulo = evento.Titulo,
                     Cidade = evento.Cidade,
+                    Programa = evento.Programa,
+                    Categoria = evento.Categoria,
+                    ImagemEvento = AdicionaImagemEvento(evento.Galeria),
                     Galeria = AdicionaGaleria(evento.Galeria),
                     Trabalho = AdicionaTrabalhos(evento.Trabalho)
                 }).ToList();
+
+       
 
 
         public ICollection<GaleriaModel> AdicionaGaleria(ICollection<Galeria> galeria)
@@ -84,6 +93,15 @@ namespace PibidFisica.Services
             }
 
             return itens;
+        }
+
+
+        public string AdicionaImagemEvento(ICollection<Galeria> galeria)
+        {
+            if (galeria.Count() > 0)
+                return galeria.ToList()[0].Link;
+            else
+                return "http://4.bp.blogspot.com/-ZibqBiui6RQ/VUdcBzXv5iI/AAAAAAAAA_4/gh00SdvXa3Y/w1200-h630-p-k-no-nu/logo-PIBID-novo.png";
         }
     }
 }

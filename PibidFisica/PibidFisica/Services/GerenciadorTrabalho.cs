@@ -28,9 +28,10 @@ namespace PibidFisica.Services
                     Autores = trabalho.Autores
                 }).FirstOrDefault();
 
-
-        public List<TrabalhoModel> ObterTodos()
+ 
+        public List<TrabalhoModel> ObterTodos(string programa)
         => _context.Trabalho
+                .Where(trabalhoModel => trabalhoModel.IdEventoNavigation.Programa.Equals(programa))
                 .Select(trabalho => new TrabalhoModel
                 {
                     IdEvento = trabalho.IdEvento,

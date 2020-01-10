@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Models.EventoModel>
+
+@{
+    ViewData["Title"] = "Index";
+    int posicaoAtual = 0;
+    int contadorItens = 0;
+    int indice = 1;
+}
+
+
+
+<table style="width: 100%">
+    <tr>
+        <td>
+            <h2>Participações em Eventos do Física Show</h2>
+        </td>
+
+        <td>
+            <div style="text-align: right">
+                <div class="btn-group" role="group">
+                    <a asp-area="" class="btn btn-primary" asp-controller="Home" asp-action="FisicaShow">Home</a>
+                    <a asp-area="" class="btn btn-primary " asp-controller="Trabalhos" asp-action="TrabalhosFisicaShow">Nossos Trabalhos</a>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<br />
+<table class="table">
+    <br />
+    <tbody>
+
+        @if (Model.Count() == 0)
+        {
+
+            <tr>
+                <td>
+                    <p style="color: orangered">Não há participações em eventos.</p>
+                </td>
+            </tr>
+
+        }
+        else
+        {
+            @for (int i = 0; i < (Model.Count() / 5) + 1; i++)
+            {
+                <tr style="white-space: pre-wrap">
+                    @foreach (var item in Model)
+                    {
+                        indice++;
+
+                        if (indice > posicaoAtual)
+                        {
+                            contadorItens++;
+                            <td>
+                                <a style="height: 130pt;width: 150pt" href="@Url.Action("Details", "Evento", new { id = item.IdEvento })" class="btn btn-default btn-sm">
+                                    <img style="height: 110pt;width: 130pt" title="Clique para ver mais" src="@item.ImagemEvento" /><br />
+                                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-weight: bold;font-size: 10pt;color: #2e6da4">
+                                        @Html.DisplayFor(modelItem => item.Titulo)
+                                    </p>
+                                </a>
+                            </td>
+                        }
+
+                        if (contadorItens == 5)
+                        {
+                            posicaoAtual = indice;
+                            contadorItens = 0;
+                            break;
+                        }
+                    }
+                </tr>
+                indice = 1;
+            }
+        }
+    </tbody>
+</table>

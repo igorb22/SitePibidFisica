@@ -40,6 +40,11 @@ namespace Persistence
                     .HasColumnName("idEvento")
                     .HasColumnType("int(11)");
 
+                entity.Property(e => e.Categoria)
+                    .IsRequired()
+                    .HasColumnName("categoria")
+                    .HasColumnType("enum('EXPERIMENTOTECA','MINICURSO','SIMPOSIO','PALESTRA','OFICINA','MESA REDONDA')");
+
                 entity.Property(e => e.Cidade)
                     .IsRequired()
                     .HasColumnName("cidade")
@@ -49,6 +54,11 @@ namespace Persistence
                 entity.Property(e => e.DataFim).HasColumnName("dataFim");
 
                 entity.Property(e => e.DataInicio).HasColumnName("dataInicio");
+
+                entity.Property(e => e.Programa)
+                    .IsRequired()
+                    .HasColumnName("programa")
+                    .HasColumnType("enum('PIBID','FISICA SHOW','GAEF')");
 
                 entity.Property(e => e.Titulo)
                     .IsRequired()

@@ -16,6 +16,8 @@ namespace Persistence
         public DateTime DataFim { get; set; }
         public string Cidade { get; set; }
         public string Titulo { get; set; }
+        public string Categoria { get; set; }
+        public string Programa { get; set; }
 
         public ICollection<Galeria> Galeria { get; set; }
         public ICollection<Trabalho> Trabalho { get; set; }
