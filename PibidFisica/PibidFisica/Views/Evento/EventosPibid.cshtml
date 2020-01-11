@@ -2,28 +2,11 @@
 
 @{
     ViewData["Title"] = "Index";
-    int posicaoAtual = 0;
-    int contadorItens = 0;
-    int indice = 1;
 }
 
 
-<style>
+<link rel="stylesheet" type="text/css" href="~/css/estilo.css" media="screen" />
 
-    .estiloCarViewProdutos {
-        border: 1px solid #ffffff;
-        display: inline-block;
-        height: 130pt;
-        width: 155pt;
-        margin: 3% 3%;
-        text-align: center;
-        background-color: #ffffff;
-        /*CardView*/
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
-        border-radius: 5px;
-    }
-</style>
 
 <table style="width: 100%">
     <tr>
@@ -52,9 +35,9 @@ else
     <div align="center">
         @foreach (var item in Model)
         {
-            <a href="@Url.Action("Details", "Evento", new { id = item.IdEvento })" class="btn btn-default btn-sm estiloCarViewProdutos">
-                <img style="height: 90%;width: 100%"   title="Clique para ver mais" src="@item.ImagemEvento" /><br />
-                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-weight: bold;font-size: 10pt;color: #2e6da4">
+            <a href="@Url.Action("Details", "Evento", new { id = item.IdEvento })" class="btn btn-default btn-sm estiloCardViewItem">
+                <img style="height: 90%;width: 100%" title="Clique para ver mais" src="@item.ImagemEvento" /><br />
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-weight: bold;font-size: 10pt;">
                     @Html.DisplayFor(modelItem => item.Titulo)
                 </p>
             </a>

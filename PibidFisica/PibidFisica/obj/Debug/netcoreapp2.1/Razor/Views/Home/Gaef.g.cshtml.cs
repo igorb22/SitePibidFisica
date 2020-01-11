@@ -70,7 +70,7 @@ using PibidFisica.Models;
             WriteLiteral("\r\n<table style=\"width: 100%\">\r\n    <tr>\r\n        <td>\r\n            <h2>Sobre o Gaef</h2>\r\n        </td>\r\n\r\n        <td>\r\n            <div style=\"text-align: right\">\r\n                <div class=\"btn-group\" role=\"group\">\r\n                    ");
             EndContext();
             BeginContext(387, 116, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "609fab396b8a422fb16be766b044ec8c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08dde2a88a8c4af09c9c659560f1b7d9", async() => {
                 BeginContext(475, 24, true);
                 WriteLiteral("Participações em Eventos");
                 EndContext();
@@ -97,7 +97,7 @@ using PibidFisica.Models;
             WriteLiteral("\r\n                    ");
             EndContext();
             BeginContext(525, 114, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be7b446708174fca82b1df480612eb1b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "488c3fda95d94fcbb797b98fa4fca740", async() => {
                 BeginContext(619, 16, true);
                 WriteLiteral("Nossos Trabalhos");
                 EndContext();

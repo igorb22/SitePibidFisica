@@ -5,10 +5,10 @@
     int count = 0;
 }
 
-<table style="width: 100%" >
+<table style="width: 100%">
     <tr>
         <td style="width: 65%">
-            <h2 >@Html.DisplayFor(model => model.Titulo)</h2>
+            <h2>@Html.DisplayFor(model => model.Titulo)</h2>
         </td>
 
         <td>
@@ -44,7 +44,7 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             @for (int i = 1; i < Model.Galeria.Count(); i++)
             {
-               <li data-target="#myCarousel" data-slide-to="@i"></li>
+                <li data-target="#myCarousel" data-slide-to="@i"></li>
             }
         </ol>
         <div class="carousel-inner" role="listbox">
@@ -84,7 +84,13 @@
 
     </div>
 }
+else
+{
 
+        <p style="color: orangered">
+            Nenhum registro do momento foi encontrado.
+        </p>
+}
 <div>
     <text> @Html.DisplayFor(model => model.Titulo) | @Html.DisplayFor(model => model.DataInicio) à @Html.DisplayFor(model => model.DataFim) |  @Html.DisplayFor(model => model.Cidade) | @Html.DisplayFor(model => model.Categoria)</text>
 </div>
@@ -94,24 +100,29 @@
 
 <div>
     <br />
-    <h2 class="text-center" >Trabalhos Apresentados</h2>
-    <hr />
-  
+    <h2 class="text-center">Trabalhos Apresentados</h2>
+
 
     <ul style="margin:0; padding:0; list-style:none;">
-        @foreach (var item in Model.Trabalho)
+        @if (Model.Trabalho.Count() > 0)
         {
-            <li style=" display:inline; float: inherit; width:6em;">
-                <h4> @item.Titulo </h4>
-                <div>@item.Autores </div>
-                <a href="@item.Link" target="_blank" title="@item.Titulo">Ver publicação</a>
+            @foreach (var item in Model.Trabalho)
+            {
+                <hr />
+                <li style=" display:inline; float: inherit; width:6em;">
+                    <h4> @item.Titulo </h4>
+                    <div>@item.Autores </div>
+                    <a href="@item.Link" target="_blank" title="@item.Titulo">Ver publicação</a>
+                </li>
+            }
+        }
+        else
+        {
+            <hr />
+            <li style="color: orangered">
+                Nenhum trabalho foi apresentado.
             </li>
-            <hr />    
         }
     </ul>
 
-</div>
-
-<div>
-    <a class="btn btn-default" asp-action="Index">Voltar</a>
 </div>

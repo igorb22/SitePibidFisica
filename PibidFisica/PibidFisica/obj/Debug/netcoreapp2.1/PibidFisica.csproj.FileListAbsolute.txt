@@ -62,7 +62,6 @@ C:\Users\igorb\Documents\SitePibidFisica\PibidFisica\PibidFisica\obj\Debug\netco
 C:\Users\igorb\Documents\SitePibidFisica\PibidFisica\PibidFisica\obj\Debug\netcoreapp2.1\PibidFisica.dll
 C:\Users\igorb\Documents\SitePibidFisica\PibidFisica\PibidFisica\obj\Debug\netcoreapp2.1\PibidFisica.pdb
 C:\Users\igorb\Documents\SitePibidFisica\PibidFisica\PibidFisica\obj\Debug\netcoreapp2.1\Razor\Views\Evento\Details.g.cshtml.cs
-C:\Users\igorb\Documents\SitePibidFisica\PibidFisica\PibidFisica\obj\Debug\netcoreapp2.1\Razor\Views\Trabalhos\Trabalhos.g.cshtml.cs
 C:\Users\igorb\Documents\SitePibidFisica\PibidFisica\PibidFisica\obj\Debug\netcoreapp2.1\Razor\Views\Evento\EventosGaef.g.cshtml.cs
 C:\Users\igorb\Documents\SitePibidFisica\PibidFisica\PibidFisica\obj\Debug\netcoreapp2.1\Razor\Views\Evento\EventosPibid.g.cshtml.cs
 C:\Users\igorb\Documents\SitePibidFisica\PibidFisica\PibidFisica\obj\Debug\netcoreapp2.1\Razor\Views\Home\FisicaShow.g.cshtml.cs
@@ -71,3 +70,4 @@ C:\Users\igorb\Documents\SitePibidFisica\PibidFisica\PibidFisica\obj\Debug\netco
 C:\Users\igorb\Documents\SitePibidFisica\PibidFisica\PibidFisica\obj\Debug\netcoreapp2.1\Razor\Views\Evento\EventosFisicaShow.g.cshtml.cs
 C:\Users\igorb\Documents\SitePibidFisica\PibidFisica\PibidFisica\obj\Debug\netcoreapp2.1\Razor\Views\Trabalhos\TrabalhosGaef.g.cshtml.cs
 C:\Users\igorb\Documents\SitePibidFisica\PibidFisica\PibidFisica\obj\Debug\netcoreapp2.1\Razor\Views\Trabalhos\TrabalhosPibid.g.cshtml.cs
+C:\Users\igorb\Documents\SitePibidFisica\PibidFisica\PibidFisica\obj\Debug\netcoreapp2.1\Razor\Views\Trabalhos\TrabalhosFisicaShow.g.cshtml.cs
