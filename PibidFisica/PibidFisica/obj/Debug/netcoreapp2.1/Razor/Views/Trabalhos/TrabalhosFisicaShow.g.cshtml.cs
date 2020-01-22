@@ -73,7 +73,7 @@ using PibidFisica.Models;
             WriteLiteral("\r\n<table style=\"width: 100%\">\r\n    <tr>\r\n        <td>\r\n            <h2>Produções do Física Show</h2>\r\n        </td>\r\n\r\n        <td>\r\n            <div style=\"text-align: right\">\r\n                <div class=\"btn-group\" role=\"group\">\r\n                    ");
             EndContext();
             BeginContext(351, 93, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f5ef977ed13a41c0b8d1eebd2d235e8e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dadbde939f344e17b3eb5ed4275ac076", async() => {
                 BeginContext(436, 4, true);
                 WriteLiteral("Home");
                 EndContext();
@@ -100,7 +100,7 @@ using PibidFisica.Models;
             WriteLiteral("\r\n                    ");
             EndContext();
             BeginContext(466, 123, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe38dd4a33b74407b9a5b3d36399643a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fce0e420f362478684b2da2b88ca48f7", async() => {
                 BeginContext(561, 24, true);
                 WriteLiteral("Participações em Eventos");
                 EndContext();
@@ -127,7 +127,7 @@ using PibidFisica.Models;
             WriteLiteral("\r\n                </div>\r\n            </div>\r\n        </td>\r\n    </tr>\r\n</table>\r\n\r\n<div>\r\n    <br />\r\n    <div align=\"right\">\r\n        ");
             EndContext();
             BeginContext(725, 340, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dada1dbda58844c9a9521cf9c0ba2054", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "60346b773fc64f67a7d01e2657a0b341", async() => {
                 BeginContext(777, 281, true);
                 WriteLiteral(@"
             <p>

@@ -5,6 +5,7 @@
     int count = 0;
 }
 
+
 <table style="width: 100%">
     <tr>
         <td style="width: 65%">
@@ -12,7 +13,7 @@
         </td>
 
         <td>
-            <div style="text-align: right">
+            <div style=" text-align: right;">
                 <div class="btn-group" role="group">
                     @if (Model.Programa.Equals("GAEF"))
                     {
@@ -62,7 +63,7 @@
                 else
                 {
                     <div class="item">
-                        <img src="@item.Link" alt="ASP.NET" class="img-responsive center-block" style="max-width: 60%;max-height: 60%;" />
+                        <img src="@item.Link" alt="ASP.NET" class="img-responsive center-block" style="max-width: 60%;max-height: 60%;"/>
                         <div class="carousel-caption" role="option">
                         </div>
                     </div>
@@ -87,9 +88,9 @@
 else
 {
 
-        <p style="color: orangered">
-            Nenhum registro do momento foi encontrado.
-        </p>
+    <p style="color: orangered">
+        Nenhum registro do momento foi encontrado.
+    </p>
 }
 <div>
     <text> @Html.DisplayFor(model => model.Titulo) | @Html.DisplayFor(model => model.DataInicio) à @Html.DisplayFor(model => model.DataFim) |  @Html.DisplayFor(model => model.Cidade) | @Html.DisplayFor(model => model.Categoria)</text>

@@ -13,3 +13,20 @@ for details on configuring this project to bundle and minify static web assets. 
     transition: 0.3s;
     border-radius: 5px;
 }
+
+.tamanhoTabela {
+    width: 100%;
+}
+
+.tamanhoCelulaColuna {
+    width: 65%;
+}
+
+.alinhamnetoADireita {
+    text-align: right;
+}
+
+.tamanhoImagemCarrosel { 
+    max-width: 60%;
+    max-height: 60%;
+}

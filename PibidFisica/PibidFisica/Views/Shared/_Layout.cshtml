@@ -6,6 +6,8 @@
     <title>@ViewData["Title"] - PibidFisica</title>
 
     <environment include="Development">
+
+        <link rel="stylesheet" href="~/css/estilo.css" />
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
@@ -27,10 +29,9 @@
                     <span class="icon-bar" style="background-color: #333"></span>
                     <span class="icon-bar" style="background-color: #333"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Gaef"  class="navbar-brand" style="font-size: 170%">Gaef</a>
-
-
+                <a asp-area="" asp-controller="Home" asp-action="IndexGaef"  class="navbar-brand" style="font-size: 170%">Gaef</a>
             </div>
+
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Pibid">Pibid</a></li>

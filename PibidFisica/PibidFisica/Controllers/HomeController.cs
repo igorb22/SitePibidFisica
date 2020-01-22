@@ -22,22 +22,17 @@ namespace PibidFisica.Controllers
             _gerenciadorGaleria = gerenciadorGaleria;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult Gaef()
+        public IActionResult IndexGaef()
         {
             return View(_gerenciadorGaleria.ObterTodos(GAEF));
         }
 
-        public ActionResult Pibid()
+        public IActionResult Pibid()
         {
             return View(_gerenciadorGaleria.ObterTodos(PIBID));
         }
 
-        public ActionResult FisicaShow()
+        public IActionResult FisicaShow()
         {
             return View(_gerenciadorGaleria.ObterTodos(FISICASHOW));
         }
